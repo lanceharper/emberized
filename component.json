@@ -1,0 +1,8 @@
+{
+  "name": "emberized",
+  "version": "0.0.0-ignored",
+  "dependencies": {
+    "ember": "~1.0.0-rc.3",
+    "requirejs": "~2.1.6"
+  }
+}
