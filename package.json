@@ -1,9 +1,8 @@
 {
-	"name": "emberized",
-	"version": "0.0.0-ignored",
-	"dependencies": {
-	},
-	"devDependencies": {
-		
-	}
+  "name": "emberized",
+  "version": "0.0.0-ignored",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt-regarde": "~0.1.1"
+  }
 }
