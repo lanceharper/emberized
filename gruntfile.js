@@ -27,6 +27,27 @@ module.exports = function(grunt) {
 			js: {
 				files: 'app/**/**/**/**/*.js',
 				tasks: ['livereload']
+			},
+			hbs: {
+				files: 'app/templates/**/*.hbs',
+				tasks: ['handlebars']
+			}
+		},
+
+		handlebars: {
+			compile: {
+				options: {
+					namespace: 'Ember.TEMPLATES',
+					amd: true,
+					processName: function(name) {
+						return name.replace('app/templates/', '')
+							.replace('.hbs', '')
+							.replace(/\//g, '_');
+					}
+				},
+				files: {
+					'app/scripts/templates.js': ['app/templates/**/*.hbs']
+				}
 			}
 		}
 	});
@@ -34,6 +55,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-regarde');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-livereload');
+	grunt.loadNpmTasks('grunt-contrib-handlebars');
 
-	grunt.registerTask('default', ['livereload-start', 'connect:livereload', 'regarde']);
+
+	grunt.registerTask('default', ['handlebars', 'livereload-start', 'connect:livereload', 'regarde']);
 };
