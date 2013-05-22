@@ -30,15 +30,13 @@ module.exports = function(grunt) {
 			},
 			hbs: {
 				files: 'app/templates/**/*.hbs',
-				tasks: ['handlebars']
+				tasks: ['ember_handlebars']
 			}
 		},
 
-		handlebars: {
+		ember_handlebars: {
 			compile: {
 				options: {
-					namespace: 'Ember.TEMPLATES',
-					amd: true,
 					processName: function(name) {
 						return name.replace('app/templates/', '')
 							.replace('.hbs', '')
@@ -55,8 +53,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-regarde');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-livereload');
-	grunt.loadNpmTasks('grunt-contrib-handlebars');
+	grunt.loadNpmTasks('grunt-ember-handlebars');
 
 
-	grunt.registerTask('default', ['handlebars', 'livereload-start', 'connect:livereload', 'regarde']);
+	grunt.registerTask('default', ['ember_handlebars', 'livereload-start', 'connect:livereload', 'regarde']);
 };
