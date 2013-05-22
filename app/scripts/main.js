@@ -20,14 +20,19 @@ requirejs.config({
 		'jquery': '../../components/jquery/jquery',
 		'ember': '../../components/ember/ember',
 		'handlebars': '../../components/handlebars/handlebars.runtime',
-		'templates': 'templates'
+		'templates': './templates'
 	}
 });
 
-require(['./app'], function(App) {
+require([
+	'./app',
+	'./controllers/persist-to-localstorage'
+], function(App, PersistController) {
 
 	App.Router.map(function() {
 		this.route("about");
 	});
+
+	App.ApplicationController = PersistController;
 
 });
