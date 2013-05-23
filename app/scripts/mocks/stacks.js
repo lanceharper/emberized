@@ -24,8 +24,8 @@ define(['faker'], function(Faker) {
 	var mintCard = function(index) {
 		return {
 			id: index+10,
-			question: Faker.Company.catchPhrase(),
-			answer: Faker.Company.bs()
+			question: Faker.Company.catchPhrase() + '?',
+			answer: Faker.Company.bs() + '.'
 		};
 	};
 

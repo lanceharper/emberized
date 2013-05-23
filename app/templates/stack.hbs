@@ -1,3 +1,7 @@
-<h3>{{title}}</h3>
+<h1>{{title}}</h1>
 
-{{log this}}
+<ul>
+{{#each card in cards}}
+	{{render 'card' card}}
+{{/each}}
+</ul>

@@ -4,6 +4,7 @@ define([
 	'./models/stack',
 	'./routes/base',
 	'./routes/stacks',
+	'./views/card',
 	/// return void
 	'templates'
 ], function(
@@ -11,7 +12,8 @@ define([
 	StacksController,
 	StackModel,
 	baseRoutes,
-	StacksRoute) {
+	StacksRoute,
+	CardView) {
 
 	var App = Ember.Application.create({
 		LOG_TRANSITIONS: true
@@ -22,6 +24,7 @@ define([
 
 	App.Stack = StackModel;
 	App.IndexRoute = StacksRoute;
+	App.CardView = CardView;
 
 	return App;
 });
