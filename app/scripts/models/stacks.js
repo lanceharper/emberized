@@ -5,7 +5,10 @@ define([
 
 	var exports;
 
-	exports = Ember.ArrayController.extend({
+	exports = Ember.ArrayProxy.extend().reopenClass({
+		find: function() {
+			return mocks;
+		}
 	});
 
 	return exports;

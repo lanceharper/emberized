@@ -3,23 +3,25 @@ define([
 	'./controllers/stacks',
 	'./models/stack',
 	'./routes/base',
+	'./routes/stacks',
 	/// return void
 	'templates'
 ], function(
 	Ember,
 	StacksController,
 	StackModel,
-	baseRoutes) {
+	baseRoutes,
+	StacksRoute) {
 
 	var App = Ember.Application.create({
 		LOG_TRANSITIONS: true
 	});
 
+
 	App.Router.map(baseRoutes);
 
-	App.ApplicationController = StacksController;
-
 	App.Stack = StackModel;
+	App.IndexRoute = StacksRoute;
 
 	return App;
 });
