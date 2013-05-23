@@ -1,15 +1,15 @@
 define([
-	'ember'
-], function(Ember) {
+	'ember',
+	'../mocks/stacks'
+], function(Ember, mocks) {
 
 	var exports;
 
 	exports = Ember.Object.extend().reopenClass({
 		find: function(id) {
-			return {id: id, foo: 'bar'};
+			return mocks.byId[id];
 		}
 	});
 
 	return exports;
-
 });
