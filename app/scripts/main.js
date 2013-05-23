@@ -25,14 +25,10 @@ requirejs.config({
 });
 
 require([
-	'./app',
-	'./controllers/persist-to-localstorage'
-], function(App, PersistController) {
+	'./app'
+], function(App) {
 
 	App.Router.map(function() {
-		this.route("about");
 	});
-
-	App.ApplicationController = PersistController;
 
 });

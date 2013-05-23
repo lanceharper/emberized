@@ -3,13 +3,9 @@
 
   <nav>
 	{{#linkTo "index"}}index{{/linkTo}}
-  	{{#linkTo "about"}}About{{/linkTo}}
   </nav>
 </header>
 
 <div>
   {{outlet}}
-
-  {{input type="text" value=name action="saveName"}}
-  <h4>check out {{name}}</h4>
 </div>
