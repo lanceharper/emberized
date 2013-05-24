@@ -1,6 +1,5 @@
 define([
 	'ember',
-	'./controllers/stacks',
 	'./controllers/card',
 	'./models/stack',
 	'./models/card',
@@ -12,7 +11,6 @@ define([
 	'templates'
 ], function(
 	Ember,
-	StacksController,
 	CardController,
 	StackModel,
 	CardModel,
@@ -33,7 +31,6 @@ define([
 	App.IndexRoute = StacksRoute;
 	App.CardRoute = CardRoute;
 
-	App.StacksController = StacksController;
 	App.CardController = CardController;
 
 	App.CardView = CardView;
