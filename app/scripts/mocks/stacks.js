@@ -1,9 +1,11 @@
-define(['faker'], function(Faker) {
+define(['faker', 'text!./images.json'], function(Faker, imageJson) {
 
 	var exports;
 
 	var numCards = 10;
 	var numStacks = 5;
+
+	var images = JSON.parse(imageJson).images;
 
 	var mintStack = function(index) {
 		var stack = {
@@ -25,6 +27,7 @@ define(['faker'], function(Faker) {
 		return {
 			id: index+10,
 			question: Faker.Company.catchPhrase() + '?',
+			image: Faker.random.array_element(images),
 			answer: Faker.Company.bs() + '.'
 		};
 	};

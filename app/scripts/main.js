@@ -24,7 +24,8 @@ requirejs.config({
 		'ember': '../../components/ember/ember',
 		'handlebars': '../../components/handlebars/handlebars.runtime',
 		'faker': '../../node_modules/Faker/Faker',
-		'templates': './templates'
+		'templates': './templates',
+		'text': '../../components/requirejs-text/text'
 	}
 });
 

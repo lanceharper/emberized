@@ -4,6 +4,7 @@
   "dependencies": {
     "ember": "~1.0.0-rc.3",
     "requirejs": "~2.1.6",
-    "handlebars": "1.0.0-rc.3"
+    "handlebars": "1.0.0-rc.3",
+    "requirejs-text": "~2.0.6"
   }
 }
