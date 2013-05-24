@@ -1,6 +1,7 @@
 define([
 	'ember',
 	'./controllers/stacks',
+	'./controllers/card',
 	'./models/stack',
 	'./models/card',
 	'./routes/base',
@@ -12,6 +13,7 @@ define([
 ], function(
 	Ember,
 	StacksController,
+	CardController,
 	StackModel,
 	CardModel,
 	baseRoutes,
@@ -23,13 +25,17 @@ define([
 		LOG_TRANSITIONS: true
 	});
 
-
 	App.Router.map(baseRoutes);
 
 	App.Stack = StackModel;
 	App.Card = CardModel;
+
 	App.IndexRoute = StacksRoute;
 	App.CardRoute = CardRoute;
+
+	App.StacksController = StacksController;
+	App.CardController = CardController;
+
 	App.CardView = CardView;
 
 	return App;

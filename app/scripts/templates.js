@@ -77,17 +77,24 @@ function program2(depth0,data) {
 this["Ember"]["TEMPLATES"]["stack"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [2,'>= 1.0.0-rc.3'];
 helpers = helpers || Ember.Handlebars.helpers; data = data || {};
-  var buffer = '', stack1, hashTypes, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
+  var buffer = '', stack1, hashTypes, escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
 
 function program1(depth0,data) {
   
-  var buffer = '', stack1, hashTypes, options;
-  data.buffer.push("\n	");
+  var buffer = '', stack1, stack2, hashTypes, options;
+  data.buffer.push("\n	<li>");
   hashTypes = {};
-  options = {hash:{},contexts:[depth0,depth0],types:["STRING","ID"],hashTypes:hashTypes,data:data};
-  data.buffer.push(escapeExpression(((stack1 = helpers.render),stack1 ? stack1.call(depth0, "card", "card", options) : helperMissing.call(depth0, "render", "card", "card", options))));
-  data.buffer.push("\n");
+  options = {hash:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[depth0,depth0],types:["ID","ID"],hashTypes:hashTypes,data:data};
+  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "card", "card", options) : helperMissing.call(depth0, "linkTo", "card", "card", options));
+  if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
+  data.buffer.push("</li>\n");
   return buffer;
+  }
+function program2(depth0,data) {
+  
+  var hashTypes;
+  hashTypes = {};
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "card.question", {hash:{},contexts:[depth0],types:["ID"],hashTypes:hashTypes,data:data})));
   }
 
   data.buffer.push("<h1>");

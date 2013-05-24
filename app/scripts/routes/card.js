@@ -13,6 +13,12 @@ define([
 		},
 
 		setupController: function(controller, model) {
+		},
+
+		renderTemplate: function() {
+			this.render('card', {
+				into: 'application'
+			});
 		}
 	});
 

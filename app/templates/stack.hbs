@@ -2,6 +2,6 @@
 
 <ul>
 {{#each card in cards}}
-	{{render 'card' card}}
+	<li>{{#linkTo card card}}{{card.question}}{{/linkTo}}</li>
 {{/each}}
 </ul>
