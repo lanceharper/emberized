@@ -6,7 +6,7 @@ define([
 	var exports;
 
 	exports = Ember.Route.extend({
-		model: function() {
+		model: function(params) {
 			return Stacks.find();
 		},
 
